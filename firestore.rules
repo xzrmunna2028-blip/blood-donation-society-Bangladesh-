@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // এই প্রজেক্টের কোড Firestore ব্যবহার করে না — সব বন্ধ রাখা নিরাপদ।
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
